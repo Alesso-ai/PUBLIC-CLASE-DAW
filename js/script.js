@@ -17,8 +17,8 @@ const prepareRegister = () => {
     register(user)
 }
 
-//Funcion para registrar un usuario
-const register = user => {
+//Funcion para registrar un usuario asyncrona
+const register = async user => {
     //Header (cabecera de la peticion)
     const header = new Headers() //-->new array
     //-->añadimos un elemento al array primero le pasas como string el content type y el segundo applicaciton/json
@@ -31,5 +31,6 @@ const register = user => {
         body: JSON.stringify(user) //-->cuerpo
     }
 
+    const request = await fetch(apiRegister, myInit) //-->hacemos la peticion
    
 }
