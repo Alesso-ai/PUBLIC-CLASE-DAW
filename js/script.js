@@ -34,4 +34,6 @@ const register = async (user) => {
   const json = await resp.json(); //-->esperamos la respuesta y la transformamos a json
   console.log(json); //-->mostramos el json
   
-};
+}
+
+prepareRegister(); //-->llamamos a la funcion para registrar un usuario
